@@ -1004,7 +1004,7 @@ html {
         z-index: 1000;
         left: 0;
         right: 0;
-       top: 10px;
+      bottom: 10px;
         justify-content: center;
         align-items: center;
         width: 100%;
