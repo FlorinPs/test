@@ -1,0 +1,1399 @@
+:root {
+    /* 🎨 Font families */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+
+    /* 🏋️ Font weights */
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    --fw-extrabold: 800;
+
+    --color-bg: #121212;
+    /* fundal principal */
+    --color-bg-secondary: #3e3e3e;
+    /* fundal secțiuni */
+    --color-text: #e0e0e0;
+    /* text normal */
+    --color-heading: #ffffff;
+    /* titluri */
+    --color-accent: #00ffc6;
+    /* culoare principală de accent (turcoaz) */
+    --color-accent-hover: #1433d8;
+    /* la hover pe butoane */
+    --color-muted: #888888;
+    /* pentru texte secundare */
+
+    /* ✍️ Font sizes */
+    --fs-xs: 0.75rem;
+    /* 12px */
+    --fs-sm: 0.875rem;
+    /* 14px */
+    --fs-base: 1rem;
+    /* 16px */
+    --fs-md: 1.25rem;
+    /* 20px */
+    --fs-lg: 1.5rem;
+    /* 24px */
+    --fs-xl: 2rem;
+    /* 32px */
+    --fs-xxl: 3rem;
+    /* 48px */
+}
+
+/****************************************************************************** body **********************************************************/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+
+
+
+/****************************************************************************** right part **********************************************************/
+
+
+.right-part {
+    height: 100vh;
+    flex: 2;
+    background-color: var(--color-bg);
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 30px;
+    position: sticky;
+    top: 0;
+    box-sizing: border-box;
+
+
+}
+
+.right-part .logo-right-part {
+    margin-top: 20px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.right-part .button-group {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.button-group .buttonp {
+    text-decoration: none;
+    background-color: var(--color-bg-secondary);
+    width: 200px;
+    height: 40px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-weight: var(--fw-semibold);
+    font-size: var(--fs-base);
+}
+
+.button-group .buttond {
+
+    text-decoration: none;
+    background-color: var(--color-bg-secondary);
+    width: 200px;
+    height: 40px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-weight: var(--fw-semibold);
+    font-size: var(--fs-base);
+    transition: 0.5s ease;
+}
+
+
+.button-group .buttonp:hover,
+.button-group .buttond:hover {
+    background-color: var(--color-accent-hover);
+    color: var(--color-bg);
+    transition: 0.5s ease;
+    scale: 1.05;
+
+}
+
+
+.right-part .description {
+    color: var(--color-muted);
+    font-size: var(--fs-base);
+    font-family: var(--font-heading);
+    font-weight: var(--fw-regular);
+}
+
+.social-icon {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon a {
+    text-decoration: none;
+    color: var(--color-text);
+
+}
+
+.social-icon svg {
+    width: var(--fs-xl);
+    height: var(--fs-xl);
+    fill: var(--color-text);
+    transition: 0.5s ease;
+}
+
+.social-icon a:hover svg {
+    fill: var(--color-accent-hover);
+    scale: 1.2;
+}
+
+.contact-button {
+    text-decoration: none;
+    background-color: var(--color-bg-secondary);
+    width: 200px;
+    height: 40px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-weight: var(--fw-semibold);
+    font-size: var(--fs-base);
+}
+
+.contact-button:hover {
+    background-color: var(--color-accent-hover);
+    color: var(--color-bg);
+    transition: 0.5s ease;
+    scale: 1.05;
+}
+
+.lang-switch {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-text);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lang-switch button {
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.lang-switch button:hover {
+    color: var(--color-accent-hover);
+}
+
+
+
+/****************************************************************************** left-part **********************************************************/
+
+.left-part {
+    flex: 3;
+    background-color: var(--color-bg);
+    padding: 20px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+
+}
+
+.left-bottom-squares {
+    position: fixed;
+    /* fixăm în fereastra browserului */
+    left: 20px;
+    /* distanță de la marginea stângă */
+    bottom: 20px;
+    /* distanță de la marginea de jos */
+    display: flex;
+    flex-direction: column;
+    /* vertical, pe coloană */
+    gap: 30px;
+    /* spațiu între pătrățele */
+    z-index: 1000;
+    /* să fie peste alte elemente */
+}
+
+.square {
+    width: 60px;
+    /* lățime pătrat */
+    height: 60px;
+    /* înălțime pătrat */
+    background-color: var(--color-bg-secondary);
+    /* culoare de umplere */
+    border-radius: 20px;
+    /* colțuri ușor rotunjite (opțional) */
+    cursor: pointer;
+    /* să arate că se poate interacționa */
+    transition: background-color 0.3s ease;
+    /* efect la hover */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square img {
+    width: 30px;
+    height: 30px;
+
+}
+
+.square:hover {
+    background-color: var(--color-accent-hover);
+    /* schimbare culoare la hover */
+}
+
+
+
+.chenar {
+    display: flex;
+    width: 80%;
+    /* Poți ajusta după cum vrei lățimea */
+    max-width: 900px;
+    /* Limită maximă */
+    height: 400px;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: linear-gradient(125deg, #cb0293 22%, #1433d8);
+    overflow: visible;
+    margin-top: 100px;
+}
+
+.imagine,
+.text {
+    flex: 1;
+    /* Ambele ocupă 50% */
+    padding: 20px;
+    color: var(--color-muted);
+    font-size: var(--fs-base);
+    font-family: var(--font-heading);
+    font-weight: var(--fw-regular);
+}
+
+.imagine {
+
+    /* Doar să vezi zona, înlocuiește cu poza ta */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(poze/poza.png);
+}
+
+.chenar .imagine img {
+    width: 200%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    transform: translateX(-25px);
+    margin-top: -30px;
+    /* mută spre stânga */
+}
+
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    color: var(--color-muted);
+    font-size: var(--fs-base);
+    font-family: var(--font-heading);
+    font-weight: var(--fw-regular);
+}
+
+.text h1 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: var(--color-text);
+    font-family: var(--font-heading);
+}
+
+.text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--color-text);
+    font-size: var(--fs-base);
+    font-family: var(--font-heading);
+    font-weight: var(--fw-regular);
+}
+
+.chenar2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    /* spațiu între carduri */
+    width: 80%;
+    /* Poți ajusta după cum vrei lățimea */
+    max-width: 900px;
+    /* Limită maximă */
+    height: 400px;
+    border-radius: 12px;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 1.5);
+    padding: 30px;
+    background: linear-gradient(125deg, #cb0293 22%, #1433d8);
+}
+
+.chenar2 .card {
+    background-color: #2b2b2b67;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 4px 10px;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-muted);
+    height: 160px;
+    width: 100%;
+    gap: 10px;
+}
+
+.card h2 {
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-size: var(--fs-md);
+}
+
+.card h4 {
+    color: var(--color-accent-hover);
+    text-align: start;
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+}
+
+.card p {
+    line-height: 1.5;
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: var(--fs-sm);
+}
+
+
+.chenar3 {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    /* Poți ajusta după cum vrei lățimea */
+    max-width: 900px;
+    /* Limită maximă */
+    height: 400px;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 1.5);
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--color-bg);
+    overflow: visible;
+
+
+}
+
+.imagine3 .text3 {
+    flex: 1;
+    /* Ambele ocupă 50% */
+
+}
+
+.imagine3 {
+
+    width: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.imagine3 img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+
+}
+
+.text3 {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+
+}
+
+.text3 h1 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: var(--color-text);
+    font-family: var(--font-heading);
+}
+
+.text3 p {
+    color: var(--color-muted);
+    font-size: var(--fs-base);
+    font-family: var(--font-body);
+    font-weight: var(--fw-regular);
+
+}
+
+.buton3 {
+    text-decoration: none;
+    background-color: var(--color-bg-secondary);
+    width: 220px;
+    height: 40px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-weight: var(--fw-semibold);
+}
+
+.buton3:hover {
+    background-color: var(--color-accent-hover);
+    color: var(--color-bg);
+    transition: 0.5s ease;
+    scale: 1.05;
+}
+
+
+
+
+.motaila {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+
+
+
+.chenar4 {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    /* Poți ajusta după cum vrei lățimea */
+    max-width: 900px;
+    /* Limită maximă */
+    height: 400px;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 1.5);
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--color-bg);
+    overflow: visible;
+
+
+
+}
+
+.imagine4 .text4 {
+    flex: 1;
+    /* Ambele ocupă 50% */
+
+}
+
+.imagine4 {
+
+    width: 300%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.imagine4 img {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+    padding: 20px;
+
+}
+
+.text4 {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+}
+
+.text4 h1 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: var(--color-text);
+    font-family: var(--font-heading);
+}
+
+.text4 p {
+    color: var(--color-muted);
+    font-size: var(--fs-base);
+    font-family: var(--font-body);
+    font-weight: var(--fw-regular);
+
+}
+
+.butong {
+    text-decoration: none;
+    background-color: var(--color-bg-secondary);
+    width: 220px;
+    height: 40px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-weight: var(--fw-semibold);
+}
+
+.butong:hover {
+    background-color: var(--color-accent-hover);
+    color: var(--color-bg);
+    transition: 0.5s ease;
+    scale: 1.05;
+}
+
+
+
+
+.chenar5 {
+    padding: 40px;
+}
+
+.logos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 coloane egale */
+    gap: 50px;
+    /* spațiu între logo-uri, vertical și orizontal */
+    justify-items: center;
+    /* centrează fiecare logo pe coloana lui */
+    align-items: center;
+    margin-top: 2rem;
+    padding: 20px;
+
+}
+
+.logos img {
+    width: 50%;
+}
+
+.logos img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+
+
+.chenar6 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    /* Poți ajusta după cum vrei lățimea */
+    max-width: 900px;
+    /* Limită maximă */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+    overflow: hidden;
+    padding: 20px;
+}
+
+
+.poze6 {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.poze6:hover {
+    transform: scale(1.05);
+    /* mărire la hover */
+}
+
+#about-me,
+#kinevo,
+#green,
+#motaila #contact {
+    scroll-margin-top: 80px
+}
+
+
+.cta-button {
+    text-decoration: none;
+    background-color: var(--color-bg-secondary);
+    width: 240px;
+    height: 40px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-bg);
+    font-family: var(--font-heading);
+    font-weight: var(--fw-semibold);
+}
+
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #f9fafb;
+    font-family: var(--font-heading);
+    color: var(--color-text);
+}
+
+.contact-form {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: var(--font-heading);
+}
+
+.contact-form label {
+    text-align: left;
+    font-size: 1rem;
+    color: #d1d5db;
+    font-family: var(--font-body);
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: var(--color-bg);
+    color: #f9fafb;
+    border: 1px solid var(--color-bg-secondary);
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    width: 500px;
+
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--color-accent-hover);
+    /* accent albastru */
+    outline: none;
+}
+
+.contact-form button {
+    background-color: var(--color-bg-secondary);
+    /* accent albastru */
+    color: var(--color-text);
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: var(--font-heading);
+    font-weight: var(--fw-bold);
+
+    width: 200px;
+    align-self: center;
+    margin-top: 20px;
+    box-shadow: var(--color-text) 0px 0px 10px;
+
+}
+
+.contact-form button:hover {
+    background-color: var(--color-accent-hover);
+    color: var(--color-bg);
+}
+
+
+
+
+
+
+.motaila-showcase {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--color-bg);
+}
+
+.motaila-showcase h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--color-text);
+    font-family: var(--font-body);
+}
+
+.motaila-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    /* spațiu între imagini */
+}
+
+.motaila-grid img {
+    width: 80vw;
+    /* 80% din lățimea ecranului */
+    max-width: 1000px;
+    /* opțional, limită superioară */
+    height: auto;
+    /* menține proporțiile */
+    border-radius: 12px;
+    /* opțional */
+
+}
+
+
+.cta-button {
+    display: inline-block;
+    margin-top: 60px;
+    padding: 12px 24px;
+    background-color: var(--color-muted);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--color-accent, #2563eb);
+}
+
+
+
+.kinevo-showcase {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--color-bg);
+}
+
+.kinevo-showcase h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--color-text);
+    font-family: var(--font-body);
+}
+
+.kinevo-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    /* spațiu între imagini */
+}
+
+.kinevo-grid img {
+    width: 80vw;
+    /* 80% din lățimea ecranului */
+    max-width: 1000px;
+    /* opțional, limită superioară */
+    height: auto;
+    /* menține proporțiile */
+    border-radius: 12px;
+    /* opțional */
+
+}
+
+
+.cta-button {
+    display: inline-block;
+    margin-top: 60px;
+    padding: 12px 24px;
+    background-color: var(--color-muted);
+    color: var(--color-bg);
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    font-family: var(--font-heading);
+}
+
+.cta-button:hover {
+    background-color: var(--color-accent, #2563eb);
+}
+
+
+
+.site-footer {
+    background-color: #111827;
+    color: #9ca3af;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+
+}
+
+.site-footer a {
+    color: #3b82f6;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+    color: #60a5fa;
+}
+
+
+
+
+.buton4 {
+    display: none;
+}
+
+
+.hide-mobile-nav {
+    display: none !important;
+}
+
+
+.lang {
+    display: none;
+}
+
+.lang.active {
+    display: inline;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    .body {
+        padding-bottom: 170px;
+        overflow-x: hidden;
+        /* Elimină scroll-ul orizontal */
+        width: 100vw;
+        /* Asigură-te că nu depășește dimensiunea ecranului */
+
+    }
+
+    .wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .right-part {
+        height: auto;
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        font-size: var(--fs-base);
+        font-family: var(--font-body);
+
+    }
+
+
+    .right-part .logo-right-part {
+        width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .right-part .button-group {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        font-size: var(--fs-base);
+        width: 80%;
+    }
+
+    .right-part .button-group .buttonp {
+        width: 100%;
+        max-width: 200px;
+        font-family: var(--font-body);
+        font-size: var(--fs-base);
+        font-weight: var(--fw-semibold);
+    }
+
+    .right-part .button-group .buttond {
+        width: 100%;
+        max-width: 200px;
+        font-family: var(--font-heading);
+        font-size: var(--fs-base);
+        font-weight: var(--fw-semibold);
+    }
+
+    .contact-button {
+        font-size: var(--fs-base);
+        font-weight: var(--fw-semibold);
+    }
+
+    .right-part .description {
+        text-align: center;
+        font-size: var(--fs-base);
+    }
+
+
+
+
+    .left-part {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+
+    }
+
+
+
+    .left-bottom-squares {
+        background: linear-gradient(125deg, #cb0293 22%, #1433d8);
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        z-index: 1000;
+        left: 0;
+        right: 0;
+        bottom: 10px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 80px;
+
+
+
+    }
+
+    .square {
+
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .right-part {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        gap: 20px;
+
+    }
+
+    .right-part .logo-right-part {
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .button-group {
+        flex-direction: column;
+
+        align-items: center;
+        gap: 5px;
+    }
+
+    .button-group .buttonp,
+    .button-group .buttond {
+        width: 120px;
+        font-family: var(--font-body);
+        font-size: var(--fs-base);
+
+    }
+
+    .contact-button {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .lang-switch {
+        margin-top: 20px;
+    }
+
+    .description {
+        text-align: center;
+        font-size: var(--fs-sm);
+        font-family: var(--font-body);
+
+
+    }
+
+    .chenar {
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+        width: 370px;
+        margin-top: 20px;
+    }
+
+    .chenar .imagine {
+        margin-top: -20px;
+        flex: 1;
+        width: 120%;
+        /* Face containerul imaginei să ocupe spațiul disponibil */
+    }
+
+    .chenar .imagine img {
+        width: 120%;
+        height: 120%;
+        /* Face imaginea să ocupe întreaga înălțime a containerului */
+        object-fit: cover;
+        /* Asigură că imaginea se scală corect fără deformare */
+    }
+
+
+
+    .chenar .text {
+        margin-top: -20px;
+        padding: 20px;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .chenar .text h1 {
+
+        font-size: var(--fs-xl);
+        color: var(--color-text);
+        font-family: var(--font-heading);
+        font-weight: var(--fw-bold);
+    }
+
+
+    .chenar .text p {
+        font-size: var(--fs-sm);
+        color: var(--color-text);
+        font-family: var(--font-body);
+        line-height: 1.5;
+        font-weight: var(--fw-regular);
+    }
+
+    .chenar2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-wrap: wrap;
+        width: 370px;
+        /* fix sau cât ai nevoie */
+        height: 600px;
+        /* sau auto, după caz */
+        box-sizing: border-box;
+        padding: 10px;
+        /* spațiu interior */
+        gap: 10px;
+        /* spațiu între carduri */
+    }
+
+    .chenar2 .card {
+        flex: 1 1 calc(50% - 10px);
+        /* 2 pe rând, cu gap */
+        /* calc(50% - 10px) pentru lățime, gap-ul de 10px */
+        height: calc((600px - 3 * 10px) / 2.3);
+        /* (înălțimea chenarului minus spații)/2 */
+        background: #222;
+        /* fundal închis, să se vadă */
+        color: #eee;
+        /* text deschis */
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: center;
+        border-radius: 8px;
+        /* colțuri rotunjite */
+        text-align: center;
+
+    }
+
+
+    .chenar2 .card h2 {
+        font-size: var(--fs-base);
+        text-align: center;
+        font-family: var(--fw-semibold);
+    }
+
+    .chenar2 .card h4 {
+        font-size: var(--fs-sm);
+        text-align: center;
+    }
+
+    .chenar2 .card p {
+        font-size: var(--fs-sm);
+        text-align: center;
+        font-family: var(--fw-regular);
+    }
+
+
+
+    .chenar3 {
+        flex-direction: column;
+        height: 600px;
+        width: 370px;
+
+    }
+
+    .imagine3 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+    .text3 {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .text3 h1 {
+        margin-top: 0;
+        font-size: var(--fs-xl);
+        font-family: var(--font-heading);
+    }
+
+    .chenar3 .buton3 {
+        font-size: var(--fs-base);
+        font-weight: var(--fw-semibold);
+        font-family: var(--font-heading);
+
+    }
+
+
+
+
+    .chenar4 {
+        flex-direction: column;
+        height: 600px;
+        width: 370px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+    .imagine {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .chenar4 .imagine4 img {
+        width: 25%;
+        height: auto;
+        object-fit: contain;
+        padding: 20px;
+    }
+
+    .text4 {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+
+    }
+
+    .chenar4 .buton4 {
+        display: flex;
+        font-size: var(--fs-base);
+        font-weight: var(--fw-semibold);
+        font-family: var(--font-heading);
+    }
+
+
+    .buton4 {
+        font-size: var(--fs-base);
+        font-weight: var(--fw-semibold);
+        font-family: var(--font-heading);
+    }
+
+    #motaila {
+        height: 400px;
+        width: 370px;
+        gap: 40px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+    }
+
+
+
+    .butonm {
+        text-decoration: none;
+        background-color: var(--color-bg-secondary);
+        width: 240px;
+        height: 40px;
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--color-text);
+        font-family: var(--font-heading);
+        font-weight: var(--fw-bold);
+    }
+
+
+
+    .chenar5 {
+        height: 600px;
+        width: 370px;
+        /* poți ajusta */
+        margin: 0 auto;
+        /* centrare chenar */
+    }
+
+    .chenar5 .logos {
+        display: flex;
+        flex-wrap: wrap;
+        /* permite împachetarea pe mai multe rânduri */
+        gap: 50px;
+        /* spațiu între imagini */
+        justify-content: center;
+        /* aliniere orizontală */
+        margin: 0 auto;
+    }
+
+    .chenar5 .logos img {
+        width: calc((100% / 2) - 20px);
+        /* două imagini pe rând, scăzând spațiul */
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+
+    #contact {
+        width: 90vw;
+        /* să ocupe 90% din lățimea ecranului */
+        margin: 20px auto;
+        /* margini mai mici pe verticală */
+        padding: 15px;
+        /* padding ușor redus */
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        font-size: 1rem;
+        /* text suficient de mare pentru citit */
+        padding: 10px;
+        /* zone touch-friendly */
+        width: 100%;
+        /* ocupa tot spațiul disponibil */
+    }
+
+    .contact-form label {
+        font-size: 1rem;
+    }
+
+    .contact-form {
+        font-size: var(--fs-sm);
+        font-weight: var(--fw-regular);
+        font-family: var(--font-heading);
+    }
+
+    .contact-form button {
+        font-size: var(--fs-base);
+        font-weight: var(--fw-semibold);
+        font-family: var(--font-heading);
+        width: 200px;
+    }
+
+
+    .cta-button {
+        font-size: var(--fs-base);
+        font-weight: var(--fw-semibold);
+        font-family: var(--font-heading);
+        color: white;
+        background-color: var(--color-bg-secondary);
+    }
+
+    .buton4 {
+
+        text-decoration: none;
+        background-color: var(--color-bg-secondary);
+        width: 220px;
+        height: 40px;
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--color-text);
+        font-family: var(--font-heading);
+        font-weight: var(--fw-semibold);
+    }
+
+    .buton4:hover {
+        background-color: var(--color-accent-hover);
+        color: var(--color-bg);
+        transition: 0.5s ease;
+        scale: 1.05;
+    }
+}
+
+
