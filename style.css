@@ -379,7 +379,8 @@ html {
     /* Limită maximă */
     height: 400px;
     border-radius: 12px;
-    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.9);
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.5);
     padding: 30px;
     background: linear-gradient(125deg, #cb0293 22%, #1433d8);
 }
@@ -428,7 +429,8 @@ html {
     max-width: 900px;
     /* Limită maximă */
     height: 400px;
-    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.9);
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 12px;
     overflow: hidden;
     background-color: var(--color-bg);
@@ -525,7 +527,8 @@ html {
     max-width: 900px;
     /* Limită maximă */
     height: 400px;
-    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.9);
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 12px;
     overflow: hidden;
     background-color: var(--color-bg);
@@ -608,7 +611,8 @@ html {
 
 .chenar5 {
     padding: 40px;
-    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.9);
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.5);
     width: 80%;
     border-radius: 12px;
 
@@ -649,7 +653,8 @@ html {
     max-width: 900px;
     /* Limită maximă */
     border-radius: 12px;
-    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.9);
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.5);
     overflow: hidden;
     padding: 20px;
 }
@@ -798,7 +803,6 @@ html {
     text-align: center;
     padding: 40px 20px;
     background-color: var(--color-bg);
-    margin-top: 50px;
 }
 
 .motaila-showcase h2 {
@@ -851,7 +855,6 @@ html {
     text-align: center;
     padding: 40px 20px;
     background-color: var(--color-bg);
-    margin-top: 50px;
 }
 
 .kinevo-showcase h2 {
@@ -978,6 +981,11 @@ html {
 
     }
 
+    .kinevo-showcase,
+    .motaila-showcase,
+    .green-showcase {
+        margin-top: 50px;
+    }
 
     .right-part .logo-right-part {
         width: 250px;
