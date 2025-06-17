@@ -32,14 +32,30 @@ const langToggleBtn = document.getElementById("lang-toggle");
 let currentLang = localStorage.getItem("siteLang") || "ro";
 
 function updateLanguage(lang) {
-  document.querySelectorAll(".lang").forEach(el => el.classList.remove("active"));
-  document.querySelectorAll(`.lang-${lang}`).forEach(el => el.classList.add("active"));
-  localStorage.setItem("siteLang", lang);
+    document.querySelectorAll(".lang").forEach(el => el.classList.remove("active"));
+    document.querySelectorAll(`.lang-${lang}`).forEach(el => el.classList.add("active"));
+    localStorage.setItem("siteLang", lang);
 }
 
 updateLanguage(currentLang);
 
 langToggleBtn.addEventListener("click", () => {
-  currentLang = currentLang === "ro" ? "en" : "ro";
-  updateLanguage(currentLang);
+    currentLang = currentLang === "ro" ? "en" : "ro";
+    updateLanguage(currentLang);
 });
+
+
+
+
+const lenis = new Lenis({
+    duration: 2.5,
+    easing: (t) => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2,
+    smooth: true,
+});
+
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);

@@ -25,6 +25,7 @@
     /* la hover pe butoane */
     --color-muted: #888888;
     /* pentru texte secundare */
+    --background-gradient: linear-gradient(125deg, #cb0293 22%, #1433d8);
 
     /* ✍️ Font sizes */
     --fs-xs: 0.75rem;
@@ -54,10 +55,13 @@
 body,
 html {
     height: 100%;
-    font-family: Arial, sans-serif;
-    scroll-behavior: smooth;
-
+    font-family: Arial, sans-serif
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 
 .wrapper {
     display: flex;
@@ -159,7 +163,8 @@ html {
 
 .social-icon a {
     text-decoration: none;
-    color: var(--color-text);
+    color: var(--color-accent-hover);
+    fill: var(--color-accent-hover);
 
 }
 
@@ -239,25 +244,31 @@ html {
 .left-bottom-squares {
     position: fixed;
     /* fixăm în fereastra browserului */
-    left: 20px;
+    left: 0;
     /* distanță de la marginea stângă */
-    bottom: 20px;
+    bottom: 0;
     /* distanță de la marginea de jos */
     display: flex;
+    align-items: center;
     flex-direction: column;
+    justify-content: space-evenly;
     /* vertical, pe coloană */
-    gap: 30px;
     /* spațiu între pătrățele */
-    z-index: 1000;
     /* să fie peste alte elemente */
+    background: linear-gradient(125deg, #cb0293 22%, #1433d8);
+    height: 100%;
+    width: 60px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+
 }
 
 .square {
-    width: 60px;
+    width: 50px;
     /* lățime pătrat */
-    height: 60px;
+    height: 50px;
     /* înălțime pătrat */
-    background-color: var(--color-bg-secondary);
+
     /* culoare de umplere */
     border-radius: 20px;
     /* colțuri ușor rotunjite (opțional) */
@@ -368,14 +379,14 @@ html {
     /* Limită maximă */
     height: 400px;
     border-radius: 12px;
-    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 1.5);
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.9);
     padding: 30px;
     background: linear-gradient(125deg, #cb0293 22%, #1433d8);
 }
 
 .chenar2 .card {
     background-color: #2b2b2b67;
-    box-shadow: rgba(0, 0, 0, 0.6) 0px 4px 10px;
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 4px 10px;
     border-radius: 12px;
     padding: 15px;
     display: flex;
@@ -417,7 +428,7 @@ html {
     max-width: 900px;
     /* Limită maximă */
     height: 400px;
-    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 1.5);
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.9);
     border-radius: 12px;
     overflow: hidden;
     background-color: var(--color-bg);
@@ -514,7 +525,7 @@ html {
     max-width: 900px;
     /* Limită maximă */
     height: 400px;
-    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 1.5);
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.9);
     border-radius: 12px;
     overflow: hidden;
     background-color: var(--color-bg);
@@ -597,6 +608,10 @@ html {
 
 .chenar5 {
     padding: 40px;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.9);
+    width: 80%;
+    border-radius: 12px;
+
 }
 
 .logos {
@@ -627,14 +642,14 @@ html {
 .chenar6 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: space-evenly;
     width: 80%;
     /* Poți ajusta după cum vrei lățimea */
     max-width: 900px;
     /* Limită maximă */
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.9);
     overflow: hidden;
     padding: 20px;
 }
@@ -744,12 +759,29 @@ html {
     transition: background-color 0.3s ease;
     font-family: var(--font-heading);
     font-weight: var(--fw-bold);
-
     width: 200px;
     align-self: center;
     margin-top: 20px;
     box-shadow: var(--color-text) 0px 0px 10px;
 
+}
+
+@keyframes pulseShadow {
+    0% {
+        box-shadow: 0 0 8px 2px rgba(71, 65, 69, 0.7);
+    }
+
+    50% {
+        box-shadow: 0 0 16px 6px rgba(163, 163, 163, 0.9);
+    }
+
+    100% {
+        box-shadow: 0 0 8px 2px rgba(142, 139, 141, 0.7);
+    }
+}
+
+.contact-form button {
+    animation: pulseShadow 2s infinite ease-in-out;
 }
 
 .contact-form button:hover {
@@ -766,13 +798,14 @@ html {
     text-align: center;
     padding: 40px 20px;
     background-color: var(--color-bg);
+    margin-top: 50px;
 }
 
 .motaila-showcase h2 {
     font-size: 2rem;
     margin-bottom: 40px;
     color: var(--color-text);
-    font-family: var(--font-body);
+    font-family: var(--font-heading);
 }
 
 .motaila-grid {
@@ -809,7 +842,7 @@ html {
 }
 
 .cta-button:hover {
-    background-color: var(--color-accent, #2563eb);
+    background-color: var(--color-accent-hover);
 }
 
 
@@ -818,13 +851,14 @@ html {
     text-align: center;
     padding: 40px 20px;
     background-color: var(--color-bg);
+    margin-top: 50px;
 }
 
 .kinevo-showcase h2 {
     font-size: 2rem;
     margin-bottom: 40px;
     color: var(--color-text);
-    font-family: var(--font-body);
+    font-family: var(--font-heading);
 }
 
 .kinevo-grid {
@@ -862,7 +896,7 @@ html {
 }
 
 .cta-button:hover {
-    background-color: var(--color-accent, #2563eb);
+    background-color: var(--color-accent-hover);
 }
 
 
@@ -911,6 +945,9 @@ html {
 
 
 
+
+
+
 @media screen and (max-width: 768px) {
 
     .body {
@@ -927,13 +964,14 @@ html {
     }
 
     .right-part {
+        top: 50px;
         height: auto;
         position: relative;
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        align-items: space-evenly;
+        justify-content: space-evenly;
         padding: 20px;
         font-size: var(--fs-base);
         font-family: var(--font-body);
@@ -950,8 +988,10 @@ html {
     }
 
     .right-part .button-group {
+        display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: center;
         gap: 10px;
         font-size: var(--fs-base);
         width: 80%;
@@ -1004,26 +1044,27 @@ html {
         z-index: 1000;
         left: 0;
         right: 0;
-      bottom: 10px;
+        bottom: 10px;
         justify-content: center;
-        align-items: center;
+        top: 0px;
+        justify-content: space-evenly;
         width: 100%;
-        height: 80px;
-
-
-
+        height: 65px;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-top-right-radius: 0px;
     }
 
     .square {
-
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         border-radius: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
         transition: background-color 0.3s ease;
+        background: none;
     }
 
     .right-part {
@@ -1080,7 +1121,7 @@ html {
         flex-direction: column;
         height: 600px;
         width: 370px;
-        margin-top: 20px;
+        border-radius: 12px;
     }
 
     .chenar .imagine {
@@ -1117,10 +1158,10 @@ html {
 
 
     .chenar .text p {
-        font-size: var(--fs-sm);
+        font-size: var(--fs-base);
         color: var(--color-text);
         font-family: var(--font-body);
-        line-height: 1.5;
+        line-height: 1.25;
         font-weight: var(--fw-regular);
     }
 
@@ -1128,7 +1169,6 @@ html {
         display: flex;
         justify-content: center;
         align-items: center;
-
         flex-wrap: wrap;
         width: 370px;
         /* fix sau cât ai nevoie */
@@ -1142,10 +1182,7 @@ html {
     }
 
     .chenar2 .card {
-        flex: 1 1 calc(50% - 10px);
-        /* 2 pe rând, cu gap */
-        /* calc(50% - 10px) pentru lățime, gap-ul de 10px */
-        height: calc((600px - 3 * 10px) / 2.3);
+        height: 130px;
         /* (înălțimea chenarului minus spații)/2 */
         background: #222;
         /* fundal închis, să se vadă */
@@ -1153,7 +1190,6 @@ html {
         /* text deschis */
         padding: 10px;
         box-sizing: border-box;
-        text-align: center;
         border-radius: 8px;
         /* colțuri rotunjite */
         text-align: center;
@@ -1176,6 +1212,7 @@ html {
         font-size: var(--fs-sm);
         text-align: center;
         font-family: var(--fw-regular);
+        color: var(--color-muted);
     }
 
 
@@ -1311,11 +1348,17 @@ html {
         display: flex;
         flex-wrap: wrap;
         /* permite împachetarea pe mai multe rânduri */
-        gap: 50px;
         /* spațiu între imagini */
-        justify-content: center;
+        justify-content: space-between;
+        /* aliniere pe rând */
+        height: 100%;
         /* aliniere orizontală */
         margin: 0 auto;
+        /* centrare chenar */
+        padding: 20px;
+        gap: 20px;
+        /* spațiu între logo-uri */
+        width: 100%;
     }
 
     .chenar5 .logos img {
@@ -1326,6 +1369,16 @@ html {
         object-fit: contain;
     }
 
+    .chenar6 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+
 
     #contact {
         width: 90vw;
@@ -1334,6 +1387,7 @@ html {
         /* margini mai mici pe verticală */
         padding: 15px;
         /* padding ușor redus */
+
     }
 
     .contact-form input,
@@ -1349,6 +1403,7 @@ html {
 
     .contact-form label {
         font-size: 1rem;
+        font-family: var(--font-heading);
     }
 
     .contact-form {
@@ -1394,6 +1449,105 @@ html {
         transition: 0.5s ease;
         scale: 1.05;
     }
+
 }
 
+@media screen and (min-width: 769px) and (max-width: 1300px) {
+    .body {
+        padding-bottom: 100px;
+        overflow-x: hidden;
+        width: 100vw;
+    }
 
+    .wrapper {
+        flex-direction: row;
+
+
+    }
+
+    .left-part {
+        width: 65%;
+        max-height: none;
+        overflow-y: auto;
+        padding: 90px;
+    }
+
+    .right-part {
+        width: 35%;
+        position: sticky;
+        height: 100vh;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: var(--fs-base);
+    }
+
+    .right-part .logo-right-part {
+        width: 200px;
+        margin: 0 0 30px 0;
+    }
+
+    .button-group {
+        flex-direction: row;
+        gap: 15px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .button-group .buttonp,
+    .button-group .buttond {
+        max-width: 150px;
+        width: 100%;
+        font-size: var(--fs-base);
+    }
+
+    .chenar,
+    .chenar2,
+    .chenar3,
+    .chenar4,
+    .chenar5 {
+        width: 100%;
+        max-width: none;
+        height: auto;
+        margin-top: 20px;
+    }
+
+
+    .proiecte6 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: none;
+        padding: 20px;
+    }
+
+
+    .chenar2 .card {
+        flex: 1 1 calc(50% - 15px);
+        height: auto;
+        padding: 15px;
+    }
+
+    #contact {
+        width: 95%;
+        margin: 30px auto;
+        padding: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    /* Ajustări suplimentare font și gap */
+    .description {
+        font-size: 1rem;
+        text-align: left;
+    }
+}
