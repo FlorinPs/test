@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofoliu</title>
     <link rel="icon" href="logo/FP LOGO.svg" type="image/svg+xml">
-    <meta name="keywords" content="Florin Pușcașu, graphic designer, web developer, portofoliu, proiecte, branding, design grafic, dezvoltare web">
+    <meta name="keywords"
+        content="Florin Pușcașu, graphic designer, web developer, portofoliu, proiecte, branding, design grafic, dezvoltare web">
     <meta name="description"
         content="Portofoliu Florin Pușcașu - graphic designer și web developer. Vezi proiectele și serviciile oferite.">
     <meta name="author" content="Florin Pușcașu">
@@ -117,7 +118,8 @@
                     <p>Adobe suites</p>
                     <p>
 
-                        <span class="lang lang-ro"> Creez identități vizuale unice și coerente care ajută brandul tău să se diferențieze și să fie memorabil.</span>
+                        <span class="lang lang-ro"> Creez identități vizuale unice și coerente care ajută brandul tău să
+                            se diferențieze și să fie memorabil.</span>
                         <span class="lang lang-en">I build strong and memorable images for brands</span>
 
 
@@ -220,19 +222,26 @@
 
             <article class="chenar6">
                 <div class="proiecte6">
-                    <img src="poze/1.png" alt="proiect1" class="poze6">
-                    <img src="poze/2.jpg" alt="proiect2" class="poze6">
-                    <img src="poze/3.png" alt="proiect3" class="poze6">
-                    <img src="poze/4.png" alt="proiect4" class="poze6">
-                    <img src="poze/5.png" alt="proiect5" class="poze6">
-                    <img src="poze/6.png" alt="proiect5" class="poze6">
-                    <img src="poze/7.jpg" alt="proiect7" class="poze6">
-                    <img src="poze/8.jpg" alt="proiect8" class="poze6">
+                    <img src="poze/1.png" alt="proiect1" class="poze6" onclick="openLightbox(this)">
+                    <img src="poze/2.jpg" alt="proiect2" class="poze6" onclick="openLightbox(this)">
+                    <img src="poze/3.png" alt="proiect3" class="poze6" onclick="openLightbox(this)">
+                    <img src="poze/4.png" alt="proiect4" class="poze6" onclick="openLightbox(this)">
+                    <img src="poze/5.png" alt="proiect5" class="poze6" onclick="openLightbox(this)">
+                    <img src="poze/6.png" alt="proiect5" class="poze6" onclick="openLightbox(this)">
+                    <img src="poze/bauhaus.png" alt="proiect7" class="poze6" onclick="openLightbox(this)">
+                    <img src="poze/8.jpg" alt="proiect8" class="poze6" onclick="openLightbox(this)">
+                    <img src="poze/music.png" alt="proiect7" class="poze6" onclick="openLightbox(this)">
+                    <img src="poze/7.jpg" alt="proiect8" class="poze6" onclick="openLightbox(this)">
 
 
                 </div>
             </article>
 
+            <!-- Lightbox overlay -->
+            <div id="lightbox" onclick="closeLightbox()">
+                <span class="close" onclick="closeLightbox(event)">&times;</span>
+                <img id="lightbox-img" src="" alt="Imagine mărită">
+            </div>
 
 
 

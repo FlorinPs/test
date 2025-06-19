@@ -59,3 +59,19 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf);
+
+
+
+function openLightbox(imgElement) {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  lightboxImg.src = imgElement.src;
+  lightbox.style.display = "flex"; // afișează lightbox-ul
+}
+
+function closeLightbox(event) {
+  if(event) event.stopPropagation();
+  const lightbox = document.getElementById("lightbox");
+  lightbox.style.display = "none"; // ascunde lightbox-ul
+}
+
